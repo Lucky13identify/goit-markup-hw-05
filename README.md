@@ -1,1 +1,1 @@
-noopener arial label lang en
+current page
