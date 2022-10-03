@@ -66,7 +66,7 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
+  transition: color 250ms var(--cubic);
   color: var(--primary-text-color);
 }
 
@@ -84,6 +84,7 @@ img {
   fill: currentColor;
   display: flex;
   align-items: center;
+  transition: color 250ms var(--cubic);
 }
 .communications-mail:hover,
 .communications-mail:focus {
@@ -196,6 +197,7 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  transition: color 250ms var(--cubic);
 }
 .footer-street {
   color: var(--white-text-color);
@@ -222,6 +224,7 @@ img {
   border: none;
   background: var(--background-color-two);
   border-radius: 4px;
+  color: var(--primary-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -230,17 +233,78 @@ img {
   font-family: inherit;
   cursor: pointer;
   padding: 6px 22px;
+  transition: 250ms var(--cubic);
 }
 .menu-section:hover,
 .menu-section:focus {
-  background: var(---main-blue-color);
+  background-color: var(---main-blue-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
   color: var(--white-text-color);
 }
 
-.pictures-list {
+.ref-works:hover .opacity-list {
+  transform: translateY(0);
+}
+.text-overlay {
+  padding: 63px 23px;
+}
+.opacity-list {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 294px;
+  top: 0;
+  left: 0;
+  transform: translateY(294px);
+  transition: transform 250ms var(--cubic);
+  background-color: rgba(33, 150, 243, 0.9);
+}
+.opacity-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--white-text-color);
+  transform: translateY(294px);
+  transition: transform 250ms var(--cubic);
+}
+
+.pictures-list:hover .opacity-list {
+  transform: translateY(0);
+}
+
+.pictures-list-head {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.ref-works {
+  position: relative;
+  display: block;
+  color: currentColor;
+}
+.ref-works:hover,
+.ref-works:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.spictures-list-paragraph {
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+.pictures-list-div {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+}
+.ref-works {
   overflow: hidden;
 }
 
@@ -259,55 +323,11 @@ img {
   transition: transform 250ms var(--cubic);
   background-color: rgba(33, 150, 243, 0.9);
 }
-.opacity-list {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: 24px;
-  margin-top: 63px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.55;
-  letter-spacing: 0.03em;
-  color: var(--white-text-color);
-  transform: translateY(294px);
-  transition: transform 250ms var(--cubic);
-}
-
-.pictures-list:hover .opacity-list {
-  transform: translateY(0);
-}
 .img-thumb {
   position: relative;
   overflow: hidden;
 }
-.pictures-list-head {
-  margin-bottom: 4px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-.ref-works {
-  display: block;
-  color: currentColor;
-}
-.ref-works:hover,
-.ref-works:focus {
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-.spictures-list-paragraph {
-  line-height: 1.88;
-  letter-spacing: 0.03em;
-  color: var(--secondary-text-color);
-}
-.pictures-list-div {
-  padding: 20px 24px;
-  border: 1px solid #eeeeee;
-}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -514,6 +534,7 @@ img {
   height: 44px;
   border-radius: 50px;
   color: var(--links-color);
+  transition: 250ms var(--cubic);
 }
 .social-network {
   display: flex;
@@ -542,6 +563,7 @@ img {
   width: 170px;
   height: 92px;
   fill: var(--links-color);
+  transition: 250ms var(--cubic);
 }
 
 .clients-border:hover,
@@ -563,6 +585,9 @@ img {
 
 .enter {
   color: var(--white-text-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.14;
 }
 .margin:not(:last-child) {
   margin-right: 10px;
@@ -571,6 +596,7 @@ img {
   background: rgba(255, 255, 255, 0.1);
   color: var(--white-text-color);
   padding: 0;
+  transition: background-color 250ms var(--cubic);
 }
 
 .link.footer:hover,
@@ -590,12 +616,11 @@ img {
   width: 100%;
   align-items: center;
   justify-content: center;
-  bottom: 1px;
+  bottom: 0;
   font-weight: 700;
-  font-size: 14px;
+
   line-height: 1.14px;
-  text-align: center;
-  letter-spacing: 0.03em;
+
   text-transform: uppercase;
   color: var(--white-text-color);
   background-color: rgba(47, 48, 58, 0.8);
@@ -607,6 +632,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms var(--cubic);
 }
 .modal {
   position: absolute;
